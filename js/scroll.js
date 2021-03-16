@@ -57,7 +57,6 @@ function scroll(wheelDelta, ev){
     scrollContent.style.transform = `translate3d(${move}px, 0, 0)`;
     
     if (move < maxMoveRight) {
-      console.log(1)
       scrollContent.style.transform = `translate3d(-8900px, 0, 0)`;
       mainPoster.style.transform = `translate3d(0px, 0px, 0px) scale(${m}, ${m})`;
       contentThird.style.transform = `translate3d(0, 0, 0)`;

@@ -126,7 +126,7 @@ section {
 }
 
 .header-top h1 > a {
-  background: url("../../imgs/icon/logo-white.png") no-repeat center center;
+  background: url("../imgs/icon/logo-white.png") no-repeat center center;
   width: 180px;
   height: 55px;
   text-indent: 101%;
@@ -195,7 +195,7 @@ section {
 .header-top .top-menu .arrow {
   display: inline-block;
   position: absolute;
-  background: url("../../imgs/icon/icon-triangle-white.svg") no-repeat center center;
+  background: url("../imgs/icon/icon-triangle-white.svg") no-repeat center center;
   width: 8px;
   height: 6px;
   top: 50%;
@@ -340,7 +340,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../imgs/icon/icon-arrow-main.svg");
+  background-image: url("../imgs/icon/icon-arrow-main.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -350,14 +350,14 @@ section {
 }
 
 .brown-arrow::before {
-  background-image: url("../../imgs/icon/icon-arrow-222.svg");
+  background-image: url("../imgs/icon/icon-arrow-222.svg");
 }
 
 .float-mark {
   position: fixed;
   width: 25.12vh;
   height: 25.12vh;
-  background-image: url("../../imgs/icon/float-symbol.svg");
+  background-image: url("../imgs/icon/float-symbol.svg");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 100;
