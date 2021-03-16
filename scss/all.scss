@@ -1,0 +1,17 @@
+@import 'config/reset';
+@import 'config/mixin';
+@import 'config/variable';
+@import 'main/header';
+@import 'main/main';
+
+body{
+  height: 1000vh;
+  overflow: hidden;
+  font-family: $font-main;
+  font-size: $font-l-base;
+  background-color: $color-white;
+}
+.d-flex{
+  display: flex;
+  flex-wrap: nowrap;
+}
