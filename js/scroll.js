@@ -7,14 +7,14 @@ const gridHyabalance = document.querySelector('.grid-hyabalance');
 const contentFour = document.querySelector('.four-img');
 const floatMark = document.querySelector('.float-mark');
 const goToFirst = document.querySelector('.goToFirst');
-// const scrollbar = document.querySelector('.scrollbar');
-// const scrollThumb = document.querySelector('.scrollbar-thumb');
+const goHome = document.getElementById('home');
 
 let move = 0;
 let scrollMove = 0;
 let windowWidth = window.innerWidth;
 let scrollContentWidth = scrollContent.scrollWidth;
-let maxMoveRight = -8900;
+let maxMoveRight = -10900;
+
 // FIREFOX 沒有 ev.wheelDelta 
 function handleWheel(ev) {
   ev.preventDefault();
@@ -31,6 +31,7 @@ if (navigator.userAgent.includes('Firefox')) {
 }
 
 function scroll(wheelDelta, ev){
+  console.log()
   ev.preventDefault();
   move += wheelDelta;
   var m = move / 10000;
@@ -57,7 +58,7 @@ function scroll(wheelDelta, ev){
     scrollContent.style.transform = `translate3d(${move}px, 0, 0)`;
     
     if (move < maxMoveRight) {
-      scrollContent.style.transform = `translate3d(-8900px, 0, 0)`;
+      scrollContent.style.transform = `translate3d(${maxMoveRight}px, 0, 0)`;
       mainPoster.style.transform = `translate3d(0px, 0px, 0px) scale(${m}, ${m})`;
       contentThird.style.transform = `translate3d(0, 0, 0)`;
       gridTitle.style.opacity = `0`;
@@ -66,10 +67,14 @@ function scroll(wheelDelta, ev){
       contentFour.classList.remove("animate__fadeOutDown");
       contentFour.classList.remove("animate__fadeInUp");
       return ;
+    }else{
+      scrollContent.style.transform = `translate3d(${move}px, 0, 0)`;
     }
   }
+  // console.log(move)
   if (move < maxMoveRight){
-    scrollContent.style.transform = `translate3d(-8900px, 0, 0)`;
+    move = maxMoveRight + 125;
+    scrollContent.style.transform = `translate3d(${move}px, 0, 0)`;
     return;
   }
   scrollContent.style.transform = `translate3d(${move}px, 0, 0)`;
@@ -109,8 +114,12 @@ function scroll(wheelDelta, ev){
   }
 }
 
-goToFirst.addEventListener('click', function(ev){
-  ev.preventDefault();
+goToFirst.addEventListener('click', function(){
   scrollContent.style.transform = `translate3d(0, 0, 0)`;
+  return;
+}, false)
 
+goHome.addEventListener('click', function(){
+  scrollContent.style.transform = `translate3d(0, 0, 0)`;
+  return;
 }, false)
